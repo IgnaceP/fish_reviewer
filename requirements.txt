@@ -1,0 +1,4 @@
+streamlit
+decord
+pandas
+numpy
