@@ -1,5 +1,4 @@
 import streamlit as st
-import decord
 from decord import VideoReader, cpu
 import pandas as pd
 import threading

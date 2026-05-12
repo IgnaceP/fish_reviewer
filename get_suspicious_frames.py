@@ -1,21 +1,6 @@
 import numpy as np
-import pandas as pd
-import cv2
-import os
 import matplotlib.pyplot as plt
-from matplotlib import patches, colors, colormaps
-from copy import copy
-from matplotlib import animation
-from IPython.display import HTML, display
-import time
-from mpl_toolkits.axes_grid1.inset_locator import inset_axes
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import pytesseract
-from PIL import Image
-from datetime import datetime, timedelta
 from tqdm import tqdm
-import pickle
-from scipy import ndimage
 
 from decord import VideoReader, cpu
 
