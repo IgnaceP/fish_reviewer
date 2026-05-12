@@ -132,11 +132,14 @@ with st.session_state.lock:
     frame = vr[real_frame_num].asnumpy()[YMIN:YMAX, XMIN:XMAX]
 st.image(frame, width=800)
 
+
 # Playback Controls
 c1, c2, c3, c4, c5 = st.columns(5)
 c1.button("⏪ (-5)", on_click=move_frame, args=(-5,))
 c2.button("(-1) W", on_click=move_frame, args=(-1,))
-c3.markdown(f"<center><b>Frame {real_frame_num}</b></center>", unsafe_allow_html=True)
+# fps to time notification
+real_frame_time = f"%02d:%02d" % (int(real_frame_num / fps // 60), int(real_frame_num / fps % 60))
+c3.markdown(f"<center><b>time: {real_frame_time}</b></center>", unsafe_allow_html=True)
 c4.button("X (+1)", on_click=move_frame, args=(1,))
 c5.button("(+5) ⏩", on_click=move_frame, args=(5,))
 
